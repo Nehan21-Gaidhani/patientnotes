@@ -10,7 +10,7 @@ import htmlToDraft from 'html-to-draftjs';
 import MicIcon from '@mui/icons-material/Mic';
 import StopIcon from '@mui/icons-material/Stop';
 import PersonIcon from '@mui/icons-material/Person';
-const genAI = new GoogleGenerativeAI("AIzaSyDjqIYsD8iBm-j7ESV3f9aUvlkPzU0uddA");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API);
 
 export default function Speech() {
   const { transcript, browserSupportsSpeechRecognition, listening } = useSpeechRecognition();
@@ -67,7 +67,8 @@ Don't change the things which are not specified. If medication is specified, the
       const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
       const result = await model.generateContent(formattedQuery);
       const response = await result.response.text();
-     
+      console.log("Generated Response:", response);
+
 
       const formattedResponse = breakString(response);
 
