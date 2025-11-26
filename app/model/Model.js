@@ -144,7 +144,7 @@ Don't change the things which are not specified. If medication is specified, the
             </Button>
           </Box>
 
-          <Box width={350} height={200} sx={{ backgroundColor: 'white', padding: 2, overflow: 'auto', border: '2px solid rgb(193, 240, 214)', borderRadius: '10px' }}>
+          <Box width={350} height={200} sx={{ backgroundColor: 'white', padding: 2, overflow: 'auto', border: '2px solid rgb(193, 240, 214)', borderRadius: '10px' ,color:'black'}}>
             <Typography variant="body1">{transcript}</Typography>
           </Box>
 
@@ -155,7 +155,7 @@ Don't change the things which are not specified. If medication is specified, the
           </Box>
         </Box>
 
-        <Box width={620} height={850} mr={20} sx={{ padding: 2, overflow: 'auto', marginTop: 2, border: '2px solid #00374e', borderRadius: '10px', background: 'linear-gradient(to right,#e2f9ec 25%,#fbf7f4,#e5efed)' }}>
+        <Box width={620} height={850} mr={20} sx={{ padding: 2, overflow: 'auto', marginTop: 2, border: '2px solid #00374e', borderRadius: '10px', background: 'linear-gradient(to right,#e2f9ec 25%,#fbf7f4,#e5efed)',color:'black' }}>
           <Editor
             editorState={editorState}
             wrapperClassName="demo-wrapper"
